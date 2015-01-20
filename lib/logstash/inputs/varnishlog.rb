@@ -7,7 +7,6 @@ require "socket" # for Socket.gethostname
 # Read from varnish cache's shared memory log
 class LogStash::Inputs::Varnishlog < LogStash::Inputs::Threadable
   config_name "varnishlog"
-  milestone 1
 
   public
   def register
