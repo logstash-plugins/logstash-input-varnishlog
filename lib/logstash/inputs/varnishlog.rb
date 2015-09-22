@@ -42,7 +42,7 @@ class LogStash::Inputs::Varnishlog < LogStash::Inputs::Threadable
   end
   
   public
-  def teardown
+  def close
     finished
-  end # def teardown
+  end # def close
 end # class LogStash::Inputs::Stdin
