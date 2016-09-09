@@ -29,10 +29,10 @@ class LogStash::Inputs::Varnishlog < LogStash::Inputs::Threadable
       str = ptr.read_string(len)
       event = LogStash::Event.new("message" => str, "host" => @hostname)
       decorate(event)
-      event["varnish_tag"] = tag
-      event["varnish_fd"] = fd
-      event["varnish_spec"] = spec
-      event["varnish_bitmap"] = bitmap
+      event.set("varnish_tag", tag)
+      event.set("varnish_fd", fd)
+      event.set("varnish_spec", spec)
+      event.set("varnish_bitmap", bitmap)
       @q << event
     rescue => e
       @logger.warn("varnishlog exception: #{e.inspect}")
