@@ -1,3 +1,6 @@
+## 3.0.2
+  - Fix some documentation issues
+
 # 3.0.0
   - Breaking: depend on logstash-core-plugin-api between 1.60 and 2.99
 
